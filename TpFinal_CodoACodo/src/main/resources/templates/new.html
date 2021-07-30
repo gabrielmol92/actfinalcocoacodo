@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+ <head>
+		<meta charset="utf-8">
+		<title>Nuevo Alimento</title>
+		<meta name="viewport" content="user-scalable=no,width=device-width,initial-scale=1">
+		<link rel="stylesheet" th:href="@{/webjars/bootstrap/4.6.0-1/css/bootstrap.min.css}">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+			
+	</head>
+	  
+		<body>
+	    <header th:replace="/layouts/header :: header"></header>  	
+		  
+	     <div class="container">
+		  <div class="row col-sm-12 col-md"> 		  
+		   <div class="col-sm-12 col-md">
+		           <h2>NUEVO ALIMENTO</h2>
+		     <form class="was-validated" th:action="@{/alimento/guardar}" th:method="post" th:object="${alimento} ">  
+			    
+			     
+			     <div class="form-group row">
+				    <label for="peso" class="col-sm-2 col-form-label">Codigo</label>
+			        <div class="col-sm-9">
+			        <input type="number" class="form-control" id="peso" th:field="*{codigo}" placeholder="Ingrese codigo del producto" required/>			
+	             </div>
+			    </div>
+			     
+			     
+			     <div class="form-group row">
+				     <label for="categoria" class="col-sm-2 col-form-label">Categoria</label>
+				   <div class="col-sm-9">
+				     <select id="categoria" class="form-control" th:field="*{categoria}" required>
+				       <option value="" selected>Seleccione</option>
+				       <option value="Gato">Gato</option>
+				       <option value="Perro">Perro</option>				  				       		      
+				     </select>		  
+				  </div>
+		        </div>
+			     			     			     
+			      <div class="form-group row">
+				  	<label  for="nrodoc"  class="col-sm-2 col-form-label" >Marca</label>	
+				  	<div class="col-sm-9">   
+				     <input type="text" class="form-control" id="marca" th:field="*{marca}"  required />
+			
+			        </div> 
+	            </div>
+			     
+			     <div class="form-group row">
+				     <label for="tipo" class="col-sm-2 col-form-label">Tipo</label>
+				   <div class="col-sm-9">
+				     <select id="tipo" class="form-control" th:field="*{tipo}" required>
+				       <option value="" selected>Seleccione</option>
+				       <option value="Cachorros">Cachorros</option>
+				       <option value="Mediano">Mediano</option>
+				       <option value="Adultos">Adultos</option>
+				       <option value="Urinario">Urinario</option>				       
+				        <option value="Control de peso">Control de peso</option>
+				       		      
+				     </select>		  
+				  </div>
+		        </div>
+	           
+			 			   	   			   
+			    <div class="form-group row">
+				    <label for="peso" class="col-sm-2 col-form-label">Peso</label>
+			        <div class="col-sm-9">
+			        <input type="number" class="form-control" id="peso" th:field="*{peso}" placeholder="Ingrese peso del alimento" required/>
+				    
+	             </div>
+			    </div>
+			  
+			  
+			      <div class="form-group row">
+				    <label for="peso" class="col-sm-2 col-form-label">Precio</label>
+			        <div class="col-sm-9">
+			        <input type="number" class="form-control" id="peso" th:field="*{precio}" placeholder="Ingrese precio" required/>
+				   
+	             </div>
+			    </div>
+			  
+			  
+			  <div class="container text-center pb-1">
+			   <button type="submit" class="btn btn-dark"  >Guardar</button>
+	     	 </div>	 
+	     	
+	     	  			   
+		   </form>	 
+		   	   
+		   </div>
+		    		    		    
+		
+	    </div>
+		
+	   </div>	
+		   
+		 
+		  <footer th:replace="/layouts/footer :: footer"></footer>
+		</body>
+		
+</html>

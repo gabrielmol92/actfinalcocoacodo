@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="utf-8">
+<title>Lista</title>
+<meta name="viewport" content="user-scalable=no,width=device-width,initial-scale=1">
+<link rel="stylesheet" th:href="@{/webjars/bootstrap/4.6.0-1/css/bootstrap.min.css}">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+</head>
+<body>
+<header th:replace="/layouts/header :: header"></header>
+<h2>Panel de administracion de alimentos </h2>
+<div class="container">
+		    <div class="row">
+		         <div class="container row col-sm-12 col-md-12">		         
+		           <div class="card mr-3"  style="width: 18rem; height:18rem">		
+		           <a href="/lista/perro">          
+                      <img src="/img/dog.jpg" class="card-img-top" alt="inf1"></a>  
+                     <div class="card-body">
+                     <p class="card-text">Perros</p>
+                   </div>
+                 </div>
+		           <div class="card mr-3" style="width: 18rem; height:18rem" >
+		            <a href="/lista/gato">     
+                      <img src="/img/cat.jpg" class="card-img-top" alt="inf2"></a>
+                     <div class="card-body">
+                     <p class="card-text">Gatos</p>
+                   </div>
+                  </div>  	
+                  
+                    <div class="card mr-3" style="width: 18rem; height:18rem">		
+		           <a href="/alimento/nuevo">          
+                      <img src="/img/food.jpg" class="card-img-top" alt="inf1"></a>  
+                     <div class="card-body">
+                     <p class="card-text">Perros</p>
+                   </div>
+                 </div>
+                  
+                  	        		        
+		         </div>		    		 		    		  
+		    </div>		
+		</div>	
+
+ <footer th:replace="layouts/footer :: footer"></footer>
+</body>
+  
+</html>
